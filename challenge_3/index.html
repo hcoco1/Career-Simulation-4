@@ -1,0 +1,888 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hcoco1.github.io/Career-Simulation-4/challenge_3/">
+      
+      
+        <link rel="prev" href="../challenge_2/">
+      
+      
+        <link rel="next" href="../challenge_4/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+    
+    
+      
+        <title>Challenge 3: Pivoting - Penetration Testing Report ☠️</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#challenge-3-pivoting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Penetration Testing Report ☠️" class="md-header__button md-logo" aria-label="Penetration Testing Report ☠️" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Penetration Testing Report ☠️
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Challenge 3: Pivoting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Penetration Testing Report ☠️" class="md-nav__button md-logo" aria-label="Penetration Testing Report ☠️" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Penetration Testing Report ☠️
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Capstone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 1: Network Scanning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 2: Initial Compromise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Challenge 3: Pivoting
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 3: Pivoting
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-the-webserver-for-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search the webserver for SSH keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesing-the-home-folder-of-the-user-alice-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accesing the home folder of the user alice-devops
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesing-the-ssh-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accesing the .ssh folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accesing-the-id_rsapem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accesing the id_rsa.pem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-the-ssh-key-to-the-kali-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy the SSH key to the Kali machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-from-your-kali-machine-to-the-other-linux-server-port-2222ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect from your Kali machine to the other Linux server (port 2222/SSH)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 4: Reconnaissance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 5: Password Cracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 6: Metasploit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 7: Passing the Hash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge 8: Finding Sensitive Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../videos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="challenge-3-pivoting"><strong>Challenge 3: Pivoting</strong></h1>
+<div class="admonition note"></div>
+<h2 id="procedure"><strong>Procedure:</strong></h2>
+<p>Now that you can run commands on the web server, we want to find a way to pivot into the other Linux machine on the network.   </p>
+<ul>
+<li>Search the webserver for SSH keys you can copy. 
+Hint: Where do each users' SSH keys tend to live? </li>
+<li>Once you've found a key to test, copy it to your Kali machine.
+Note: There are some tricky ways to copy the file directly, but this is a great place to keep it simple. Copy and paste the contents of the key from one window to another.</li>
+<li>Use the key to connect from your Kali machine to the other Linux server you found earlier, using the non-standard port number revealed in your scans.</li>
+</ul>
+<p><strong>Hint</strong>: How do you use a specific key file with SSH? How do you define a custom port to connect to? </p>
+<p><strong>Hint</strong>: You will need to know which username to try and connect with. Which user did the stolen key originally belong to? </p>
+<p><strong>Note</strong>: Some SSH clients will refuse to use a key with file permissions that are too open. You will need to ensure ONLY the key file owner has read, write, or execute permissions. </p>
+<h2 id="solution"><strong>Solution:</strong></h2>
+<h3 id="search-the-webserver-for-ssh-keys">Search the webserver for <strong><a href="https://www.ssh.com/academy/ssh-keys">SSH keys</a></strong></h3>
+<p><img alt="alt text" src="../images/Pasted%20image%2020240507230632.png"></p>
+<h3 id="accesing-the-home-folder-of-the-user-alice-devops">Accesing the home folder of the user alice-devops</h3>
+<p><img alt="alt text" src="../images/Pasted%20image%2020240507230800.png"></p>
+<h3 id="accesing-the-ssh-folder">Accesing the .ssh folder</h3>
+<p><img alt="alt text" src="../images/Pasted%20image%2020240507230921.png"></p>
+<h3 id="accesing-the-id_rsapem">Accesing the <strong><a href="https://www.howtogeek.com/devops/what-is-a-pem-file-and-how-do-you-use-it/">id_rsa.pem</a></strong></h3>
+<p><img alt="alt text" src="../images/Pasted%20image%2020240507231043.png"></p>
+<h3 id="copy-the-ssh-key-to-the-kali-machine">Copy the SSH key to the Kali machine</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll">└─$<span class="w"> </span>cat<span class="w"> </span>alice_key.pem<span class="w"> </span>
+</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a>-----BEGIN<span class="w"> </span>OPENSSH<span class="w"> </span>PRIVATE<span class="w"> </span>KEY-----
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>NhAAAAAwEAAQAAAYEAkSezP2rFcljzRTGpr0Gkeemrawp3rbSj6tvcrvS7zWzpz1fPFmKZ
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>7kA1n/TGMZJ5ryKBthswGMeS2DvyciuQ/LtMBFZ2zSkpoh6mKayG8cpJoGuyCC+Qzafq/o
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>t5srRhhGJp3Z4aETESkMOT08GDHWpxyv+Y+Kvnc2khaPy8aXHG/axQSoPURH9ebay4Lgx5
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>Rsq2QIhX+Pnw9EXg+xS3cIvkerG4h7Ruq3jmefTT5pMmw4rVR0l2SaUNWjVLvzuwi6b82q
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>SFLQx5hlIaz2mWieOWihtccIiRHm4Jc/EYpHhwMxCey2rjk/X9rAskIg554UJPt5IdcCDd
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>sawzY2fPYGPziY8QhQ95EVbHrZ9WlVNSQ0p2tGT171sZW/yK3Z1x0iUnyjH2xfZVLZYEsW
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>0zdPAazcVEWfxhc+0TOkQFtLQS3IB01pVNpmNY6Qh4XC8r83q9lSnO0Z3EaIDj4QktGYXr
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>2k9BOfF47AMD6j2/6XYOTrm2GoRdOnBo1uC36ub3AAAFiLytCma8rQpmAAAAB3NzaC1yc2
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>EAAAGBAJEnsz9qxXJY80Uxqa9BpHnpq2sKd620o+rb3K70u81s6c9XzxZime5ANZ/0xjGS
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>ea8igbYbMBjHktg78nIrkPy7TARWds0pKaIepimshvHKSaBrsggvkM2n6v6LebK0YYRiad
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>2eGhExEpDDk9PBgx1qccr/mPir53NpIWj8vGlxxv2sUEqD1ER/Xm2suC4MeUbKtkCIV/j5
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>8PRF4PsUt3CL5HqxuIe0bqt45nn00+aTJsOK1UdJdkmlDVo1S787sIum/NqkhS0MeYZSGs
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>9plonjloobXHCIkR5uCXPxGKR4cDMQnstq45P1/awLJCIOeeFCT7eSHXAg3bGsM2Nnz2Bj
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>84mPEIUPeRFWx62fVpVTUkNKdrRk9e9bGVv8it2dcdIlJ8ox9sX2VS2WBLFtM3TwGs3FRF
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>n8YXPtEzpEBbS0EtyAdNaVTaZjWOkIeFwvK/N6vZUpztGdxGiA4+EJLRmF69pPQTnxeOwD
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>A+o9v+l2Dk65thqEXTpwaNbgt+rm9wAAAAMBAAEAAAGAPnl21bGvv7J3Ke3hGZRIJUykQd
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>Lkhbf84QW2KvscpaLd0yb486qGlBvAuNLSRt3DT9SrPWTgQ5oKItVSWT9VDOHUKv3H7i9s
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>QuGsJL2j6wdkvw37Nzi5uzotk1cWjwrB+gedhwwYLhQP6Iy04GwmcY+x4Gw4O7dJS8wQ3C
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>4DLeMRgXcbq6anwr+LNesj7nXh8M0ouge0zW1N/uTgm1BkT6V2NjSttoK7K0RC9nSgi1oE
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>Uh88Ao2kwreuUogjzO/0O4FKGo+XZKdQfARcaluzNw2rfo9Ks03qC8DvTqYUKBTo3eKkBW
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>XJLC/eEVkhbrJeevG/4bS0Vz+KkOkRann8SliekRdASEfbDNDF3b1+9VVCFuy/HzFoytsy
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>5YZK/CgUIIEh30raAAJ9BOMzx6knOxdI/ARpyBM9QTT0qc1zLN6OoKLcJys1Nk/nfCRIhQ
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>g+Evbbh0mezFkT0F+/R3MMprwpUKhSHIeu0cDkURrxAztMusSdiF9CH625RRhdy3WJAAAA
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>wBUVjpUk8ii9e5/eiJF/A8Q4cJZcMPgRG+l0+kLj0ObUd4tpaXCq0m77XsK4loVDBS/mzt
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>kevjtlFDc8eLEYltl957wEJ8QxoFUVjs8sUyGntUz1ko51YeNxs8BnghwuNyMeM6QicgBS
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>qNSix6CMkzLz2Ixg29ZfEj65y8rSUvk/WWRn0JMDXrbz7CnglhmcFZiDMrJqlnz35n20Hr
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>9vIhC4+fm/R3Ae7TmvikqyVIIMHFvDX0Rq7n3lcrbzUyEa5QAAAMEAxAouYKwZroCeambB
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>C2h8WA8k2Dv6LyVNCBX9C873hfaRzc1V5UT2js28odhbVGkdxnFWvLDIDQqGu4KfY19nyn
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>KZVR7jJe3D6VV3sEnMQwwHbjHtFgkhoWAPjAy6LSWNEWqHWfnwiWzGaaHGbbja0/8FS8uH
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>b6uOq8p0zPQhpyawMKup06SurDy8IFLRcIDxsu18LJL2mwRSbcHthloVQtPBARGe1a5Lag
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>zTWx8K+KbZw1Pvd56w8r210XooeYiDAAAAwQC9jUW7uh/RgrAo2DleIwyu3h98By281vqO
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>+FW+IbkEy4mDBtdOctQky4P/tHqgUslyWZUf1NX2u5oXQ9l4WwqjSPPQkfaA+VOamOhk6Z
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a>ri3x3sg0b1Kd4MsI5I2fcYCAFIIMC53wQF84aoSgVxP0wOePA7FxmQuDh0F34/HYw7pDTa
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>4naItp+ZQcctLiwReWWGBK3RNEWfMtxFTFkBh58pA8tYk7YBdy2/rfIsHDEWIEeFdXlpKL
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="nv">hem01tvSc1lX0AAAANcm9vdEB1YnVudHUyMgECAwQFBg</span><span class="o">==</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>-----END<span class="w"> </span>OPENSSH<span class="w"> </span>PRIVATE<span class="w"> </span>KEY-----
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>└─$<span class="w"> </span>ll
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>total<span class="w"> </span><span class="m">40</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>DCV-Storage
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>May<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">02</span>:41<span class="w"> </span>Desktop
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>Documents
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>Downloads
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>Music
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>Pictures
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>Public
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>Templates
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Nov<span class="w"> </span><span class="m">23</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>Videos
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="hll">-rw-------<span class="w"> </span><span class="m">1</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">2602</span><span class="w"> </span>May<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">01</span>:48<span class="w"> </span>alice_key.pem
+</span><a id="__codelineno-0-55" name="__codelineno-0-55"></a>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a>└─$<span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<h3 id="connect-from-your-kali-machine-to-the-other-linux-server-port-2222ssh">Connect from your Kali machine to the other Linux server (port 2222/SSH)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll">└─$<span class="w"> </span>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>alice_key.pem<span class="w"> </span><span class="c1">#Providing permissions</span>
+</span><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll">└─$<span class="w"> </span>ssh<span class="w"> </span>ssh<span class="w"> </span>-i<span class="w"> </span>alice_key.pem<span class="w"> </span>alice-devops@172.31.44.198<span class="w"> </span>-p<span class="w"> </span><span class="m">2222</span>
+</span><a id="__codelineno-1-6" name="__codelineno-1-6"></a>Welcome<span class="w"> </span>to<span class="w"> </span>Ubuntu<span class="w"> </span><span class="m">22</span>.04<span class="w"> </span>LTS<span class="w"> </span><span class="o">(</span>GNU/Linux<span class="w"> </span><span class="m">6</span>.5.0-1018-aws<span class="w"> </span>x86_64<span class="o">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w"> </span>*<span class="w"> </span>Documentation:<span class="w">  </span>https://help.ubuntu.com
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w"> </span>*<span class="w"> </span>Management:<span class="w">     </span>https://landscape.canonical.com
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w"> </span>*<span class="w"> </span>Support:<span class="w">        </span>https://ubuntu.com/advantage
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">  </span>System<span class="w"> </span>information<span class="w"> </span>as<span class="w"> </span>of<span class="w"> </span>Wed<span class="w"> </span>May<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">03</span>:26:25<span class="w"> </span>UTC<span class="w"> </span><span class="m">2024</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span>System<span class="w"> </span>load:<span class="w">  </span><span class="m">0</span>.13037109375<span class="w">      </span>Processes:<span class="w">             </span><span class="m">200</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">  </span>Usage<span class="w"> </span>of<span class="w"> </span>/:<span class="w">   </span><span class="m">33</span>.7%<span class="w"> </span>of<span class="w"> </span><span class="m">19</span>.20GB<span class="w">   </span>Users<span class="w"> </span>logged<span class="w"> </span><span class="k">in</span>:<span class="w">       </span><span class="m">0</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">  </span>Memory<span class="w"> </span>usage:<span class="w"> </span><span class="m">36</span>%<span class="w">                </span>IPv4<span class="w"> </span>address<span class="w"> </span><span class="k">for</span><span class="w"> </span>eth0:<span class="w"> </span><span class="m">172</span>.31.44.198
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">  </span>Swap<span class="w"> </span>usage:<span class="w">   </span><span class="m">0</span>%
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w"> </span>*<span class="w"> </span>Ubuntu<span class="w"> </span>Pro<span class="w"> </span>delivers<span class="w"> </span>the<span class="w"> </span>most<span class="w"> </span>comprehensive<span class="w"> </span>open<span class="w"> </span><span class="nb">source</span><span class="w"> </span>security<span class="w"> </span>and
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">   </span>compliance<span class="w"> </span>features.
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">   </span>https://ubuntu.com/aws/pro
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="m">257</span><span class="w"> </span>updates<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>applied<span class="w"> </span>immediately.
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="m">11</span><span class="w"> </span>of<span class="w"> </span>these<span class="w"> </span>updates<span class="w"> </span>are<span class="w"> </span>standard<span class="w"> </span>security<span class="w"> </span>updates.
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>To<span class="w"> </span>see<span class="w"> </span>these<span class="w"> </span>additional<span class="w"> </span>updates<span class="w"> </span>run:<span class="w"> </span>apt<span class="w"> </span>list<span class="w"> </span>--upgradable
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>Last<span class="w"> </span>login:<span class="w"> </span>Wed<span class="w"> </span>May<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">01</span>:50:31<span class="w"> </span><span class="m">2024</span><span class="w"> </span>from<span class="w"> </span><span class="m">172</span>.31.39.126
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="hll">alice-devops@ubuntu22:~$<span class="w"> </span>
+</span></code></pre></div></td></tr></table></div>
+<p><img alt="alt text" src="../images/Pasted%20image%2020240507232829.png"></p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hcoco1-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<div class="admonition note"></div>
+<div class="button-container" markdown="1">
+<a href="/Career-Simulation-3/challenge_2/" class="md-button md-button--primary">Previous: Challenge 2</a>
+<a href="/Career-Simulation-3/" class="md-button md-button--secondary">Home 🏠</a>
+<a href="/Career-Simulation-3/challenge_4/" class="md-button md-button--primary">Next: Challenge 4</a>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://www.hcoco1.com"  target="_blank" rel="noopener">Ivan Arias</a>
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hcoco1" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/hcoco1" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/hcoco1/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      
+    
+  </body>
+</html>
