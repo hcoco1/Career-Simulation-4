@@ -1,88 +1,176 @@
-# **Challenge 4: Reconnaissance**
+# **Step 4: Vulnerabilities**
 !!! note ""
-## **Procedure:**
 
-With SSH access to the second Linux machine, our new goal is to find our way into the remaining Windows hosts.
+## nmap
 
-- Inexperienced or negligent developers and administrators frequently keep bad password management practices. Search for text files and scripts that might contain sensitive data, like passwords, keys, or hashes. 
+- Use  nmap to enumerate WordPress-specific information, such as installed plugins, themes, and versions.
 
-**Hint**: With user-level access, it is a good idea to start by looking into that user's own files before expanding outward. 
+```python linenums="1" hl_lines="38 44"
+┌──(hcoco1㉿kali)-[~]
+└─$ sudo nmap -p80,443 --script http-wordpress-enum 192.168.1.226
 
-- Find the hash that appears to be associated with an Administrator account on a Windows machine. 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-25 07:07 EDT
+Nmap scan report for unknownf2a4540f4500.attlocal.net (192.168.1.226)
+Host is up (0.0022s latency).
 
-## **Solution:**
+PORT    STATE SERVICE
+80/tcp  open  http
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   plugins
+|     akismet
+|     contact-form-7 4.1
+|     jetpack 3.3.2
+|     all-in-one-seo-pack 
+|     google-sitemap-generator 4.0.7.1
+|     google-analytics-for-wordpress 5.3.2
+|     wptouch 3.7.3
+|     all-in-one-wp-migration 2.0.4
+|     wp-mail-smtp 0.9.5
+|   themes
+|     twentythirteen 1.6
+|     twentyfourteen 1.5
+|_    twentyfifteen 1.3
+443/tcp open  https
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   plugins
+|     akismet
+|     contact-form-7 4.1
+|     jetpack 3.3.2
+|     all-in-one-seo-pack 
+|     google-sitemap-generator 4.0.7.1
+|     google-analytics-for-wordpress 5.3.2
+|     wptouch 3.7.3
+|     all-in-one-wp-migration 2.0.4
+|     wp-mail-smtp 0.9.5
+|   themes
+|     twentythirteen 1.6
+|     twentyfourteen 1.5
+|_    twentyfifteen 1.3
+MAC Address: 08:00:27:52:3B:4C (Oracle VirtualBox virtual NIC)
 
-### Findings in the target Machine: **authorized_keys file**
+Nmap done: 1 IP address (1 host up) scanned in 5.13 seconds
 
-
-```bash linenums="1" hl_lines="5 9 12 14 15"
-alice-devops@ubuntu22:~$ whoami
-alice-devops
-alice-devops@ubuntu22:~$ id
-uid=1002(alice-devops) gid=1002(alice-devops) groups=1002(alice-devops)
-alice-devops@ubuntu22:~$ pwd
-/home/alice-devops
-alice-devops@ubuntu22:~$ ll
-ll: command not found
-alice-devops@ubuntu22:~$ ls -a
-.  ..  .bash_history  .cache  .config  .local  .ssh  scripts
-alice-devops@ubuntu22:~$ cd .ssh
-alice-devops@ubuntu22:~/.ssh$ ls -a
-.  ..  authorized_keys
-alice-devops@ubuntu22:~/.ssh$ cat authorized_keys 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCRJ7M/asVyWPNFMamvQaR56atrCnettKPq29yu9LvNbOnPV88WYpnuQDWf9MYxknmvIoG2GzAYx5LYO/JyK5D8u0wEVnbNKSmiHqYprIbxykmga7IIL5DNp+r+i3mytGGEYmndnhoRMRKQw5PTwYMdanHK/5j4q+dzaSFo/Lxpccb9rFBKg9REf15trLguDHlGyrZAiFf4+fD0ReD7FLdwi+R6sbiHtG6reOZ59NPmkybDitVHSXZJpQ1aNUu/O7CLpvzapIUtDHmGUhrPaZaJ45aKG1xwiJEebglz8RikeHAzEJ7LauOT9f2sCyQiDnnhQk+3kh1wIN2xrDNjZ89gY/OJjxCFD3kRVsetn1aVU1JDSna0ZPXvWxlb/IrdnXHSJSfKMfbF9lUtlgSxbTN08BrNxURZ/GFz7RM6RAW0tBLcgHTWlU2mY1jpCHhcLyvzer2VKc7RncRogOPhCS0ZhevaT0E58XjsAwPqPb/pdg5OubYahF06cGjW4Lfq5vc= root@ubuntu22
-alice-devops@ubuntu22:~/.ssh$ 
 ```
-### Findings in the target Machine: **windows-maintenance.sh script**
+### Notable Findings
 
-```bash linenums="1" hl_lines="16-43"
-alice-devops@ubuntu22:~$ ls -a
-.  ..  .bash_history  .cache  .config  .local  .ssh  scripts
-alice-devops@ubuntu22:~$ cd .ssh
-alice-devops@ubuntu22:~/.ssh$ ls -a
-.  ..  authorized_keys
-alice-devops@ubuntu22:~/.ssh$ cat authorized_keys 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCRJ7M/asVyWPNFMamvQaR56atrCnettKPq29yu9LvNbOnPV88WYpnuQDWf9MYxknmvIoG2GzAYx5LYO/JyK5D8u0wEVnbNKSmiHqYprIbxykmga7IIL5DNp+r+i3mytGGEYmndnhoRMRKQw5PTwYMdanHK/5j4q+dzaSFo/Lxpccb9rFBKg9REf15trLguDHlGyrZAiFf4+fD0ReD7FLdwi+R6sbiHtG6reOZ59NPmkybDitVHSXZJpQ1aNUu/O7CLpvzapIUtDHmGUhrPaZaJ45aKG1xwiJEebglz8RikeHAzEJ7LauOT9f2sCyQiDnnhQk+3kh1wIN2xrDNjZ89gY/OJjxCFD3kRVsetn1aVU1JDSna0ZPXvWxlb/IrdnXHSJSfKMfbF9lUtlgSxbTN08BrNxURZ/GFz7RM6RAW0tBLcgHTWlU2mY1jpCHhcLyvzer2VKc7RncRogOPhCS0ZhevaT0E58XjsAwPqPb/pdg5OubYahF06cGjW4Lfq5vc= root@ubuntu22
-alice-devops@ubuntu22:~/.ssh$ ls
-authorized_keys
-alice-devops@ubuntu22:~/.ssh$ cd ..
-alice-devops@ubuntu22:~$ ls
-scripts
-alice-devops@ubuntu22:~$ cd scripts/
-alice-devops@ubuntu22:~/scripts$ ls -a
-.  ..  windows-maintenance.sh
-alice-devops@ubuntu22:~/scripts$ cat windows-maintenance.sh 
-#!/usr/bin/bash
 
-# This script will (eventually) log into Windows systems as the Administrator user and run system updates on them
+The `http-wordpress-enum` script provided information about the WordPress plugins and themes installed on the target site. The results indicate the presence of the following:
 
-# Note to self: The password field in this .sh script contains
-# an MD5 hash of a password used to log into our Windows systems 
-# as Administrator. I don't think anyone will crack it. - Alice 
+Plugins:
 
-username="Administrator"
-password_hash="00bfc8c729f5d4d529a412b12c58ddd2"
-# password="00bfc8c729f5d4d529a412b12c58ddd2"
+- akismet
+- contact-form-7 (version 4.1)
+- jetpack (version 3.3.2)
+- all-in-one-seo-pack
+- google-sitemap-generator (version 4.0.7.1)
+- google-analytics-for-wordpress (version 5.3.2)
+- wptouch (version 3.7.3)
+- all-in-one-wp-migration (version 2.0.4)
+- wp-mail-smtp (version 0.9.5)
 
-#TODO: Figure out how to make this script log into Windows systems and update them
+Themes:
 
-# Confirm the user knows the right password
-echo "Enter the Administrator password"
-read input_password
-input_hash=`echo -n $input_password | md5sum | cut -d' ' -f1`
+- twentythirteen (version 1.6)
+- twentyfourteen (version 1.5)
+- twentyfifteen (version 1.3)
 
-if [[ $input_hash == $password_hash ]]; then
-        echo "The password for Administrator is correct."
-else
-        echo "The password for Administrator is incorrect. Please try again."
-        exit
-fi
+>This enumeration provides a list of potential attack vectors as these plugins and themes might have known vulnerabilities that could be exploited.
 
-#TODO: Figure out how to make this script log into Windows systems and update them
-alice-devops@ubuntu22:~/scripts$ 
+
+## nikto
+
+- Use nikto against the identified directories and files to check for known vulnerabilities.
+
+```bash linenums="1" hl_lines="38 44"
+┌──(hcoco1㉿kali)-[~]
+└─$ nikto -h https://192.168.1.226
+
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          192.168.1.226
++ Target Hostname:    192.168.1.226
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /CN=www.example.com
+                   Ciphers:  ECDHE-RSA-AES256-GCM-SHA384
+                   Issuer:   /CN=www.example.com
++ Start Time:         2024-06-25 07:13:05 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache
++ /: The site uses TLS and the Strict-Transport-Security HTTP header is not defined. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ /UlQw0ECg.conf: Retrieved x-powered-by header: PHP/5.5.29.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ /index: Uncommon header 'tcn' found, with contents: list.
++ /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. The following alternatives for 'index' were found: index.html, index.php. See: http://www.wisec.it/sectou.php?id=4698ebdc59d15,https://exchange.xforce.ibmcloud.com/vulnerabilities/8275
++ Hostname '192.168.1.226' does not match certificate's names: www.example.com. See: https://cwe.mitre.org/data/definitions/297.html
++ /: The Content-Encoding header is set to "deflate" which may mean that the server is vulnerable to the BREACH attack. See: http://breachattack.com/
++ /admin/: This might be interesting.
++ /image/: Drupal Link header found with value: <https://192.168.1.226/?p=23>; rel=shortlink. See: https://www.drupal.org/
++ /wp-links-opml.php: This WordPress script reveals the installed version.
++ /license.txt: License file found may identify site software.
++ /admin/index.html: Admin login page/section found.
++ /wp-login/: Cookie wordpress_test_cookie created without the secure flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /wp-login/: Cookie wordpress_test_cookie created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /wp-login/: Admin login page/section found.
++ /wordpress/: A Wordpress installation was found.
++ /wp-admin/wp-login.php: Wordpress login found.
++ /wordpress/wp-admin/wp-login.php: Wordpress login found.
++ /blog/wp-login.php: Wordpress login found.
++ /wp-login.php: Wordpress login found.
++ /wordpress/wp-login.php: Wordpress login found.
++ /#wp-config.php#: #wp-config.php# file found. This file contains the credentials.
++ 8102 requests: 0 error(s) and 22 item(s) reported on remote host
++ End Time:           2024-06-25 07:17:20 (GMT-4) (255 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
 ```
 
-![alt text](images/Pasted%20image%2020240507233552.png)
+
+### Notable Findings
+
+Nikto provided additional insights and potential security issues:
+
+SSL Info:
+
+- Subject: /CN=www.example.com
+- Issuer: /CN=www.example.com
+- Ciphers: ECDHE-RSA-AES256-GCM-SHA384
+
+Server:
+
+- Apache web server detected.
+
+Configuration Issues:
+
+- Missing Strict-Transport-Security header.
+- Missing X-Content-Type-Options header.
+- Retrieved x-powered-by header: PHP/5.5.29.
+- Apache mod_negotiation enabled with MultiViews.
+- Content-Encoding header set to deflate, potentially vulnerable to BREACH attack.
+
+Interesting Directories/Files:
+
+- /admin/
+- /image/
+- /wp-links-opml.php: Reveals the installed WordPress version.
+- /license.txt: May identify site software.
+- /admin/index.html: Admin login page/section found.
+- Multiple WordPress login pages (/wp-login.php, /wp-admin/wp-login.php, etc.)
+- wp-config.php file found, which contains credentials.
+
+
+
+
+
+
+
+
+
+
 
 <div id="disqus_thread"></div>
 <script>
@@ -107,7 +195,7 @@ alice-devops@ubuntu22:~/scripts$
 !!! note ""
 
 <div class="button-container" markdown="1">
-<a href="/Career-Simulation-3/challenge_3/" class="md-button md-button--primary">Previous: Challenge 3</a>
+<a href="/Career-Simulation-3/challenge_1/" class="md-button md-button--primary">Previous: Challenge 1</a>
 <a href="/Career-Simulation-3/" class="md-button md-button--secondary">Home 🏠</a>
-<a href="/Career-Simulation-3/challenge_5/" class="md-button md-button--primary">Next: Challenge 5</a>
+<a href="/Career-Simulation-3/challenge_3/" class="md-button md-button--primary">Next: Challenge 3</a>
 </div>

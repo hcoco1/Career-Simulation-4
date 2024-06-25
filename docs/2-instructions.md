@@ -14,10 +14,13 @@ During this phase, specific network attacks will be the focus:
 - Ivan will undertake a comprehensive web penetration test using the Mr. Robot VM, and will document the process and results. 
 
 
+# My Local Video
+
 <video width="640" height="480" controls>
-  <source src="/videos/mrrobot.mp4" type="video/mp4">
+  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/mrrobot.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
 
 - Ozzy will perform MITM or VNC server attacks, including ARP Spoofing, DNS Spoofing, and SSL Stripping. 
 - Jordan will execute DoS and simulate DDoS attacks, documenting methods and impacts on service availability. 

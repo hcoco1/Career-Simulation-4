@@ -24,16 +24,10 @@ Welcome to the **Career Simulation 4**. In this career simulation, you will use 
 
 - [Home 🏠](index.md)
 - [Introduction](2-instructions.md)
-- [Challenge 1: Network Scanning](challenge_1.md)
-- [Challenge 2: Initial Compromise](challenge_2.md)
-- [Challenge 3: Pivoting](challenge_3.md)
-- [Challenge 4: System Reconnaissance](challenge_4.md)
-- [Challenge 5: Password Cracking](challenge_5.md)
-- [Challenge 6: Metasploit](challenge_6.md)
-- [Challenge 7: Passing the Hash](challenge_7.md)
-- [Challenge 8: Finding Sensitive Files](challenge_8.md)
-- [Report: Documenting the Findings](report.md)
-- [Videos: Pentesting Videos](videos.md)
+- [Step 1: Set Up Environment](challenge_1.md)
+- [Step 2: Network Scanning](challenge_2.md)
+- [Step 2: Initial Compromise](challenge_2.md)
+
 
 
 ---
