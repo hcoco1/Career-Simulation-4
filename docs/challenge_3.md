@@ -79,7 +79,7 @@ Finished
 
 >The gobuster scan revealed several interesting directories and files on the target web server. 
 
-### Notable Findings
+### Findings
 - /admin (Status: 301) -> Redirects to /admin/
 - /dashboard (Status: 302) -> Redirects to /wp-admin/
 - /login (Status: 302) -> Redirects to /wp-login.php
@@ -165,18 +165,57 @@ window
 ```
 > Flag 1 was found.
 
+### Testing directories
+
+
+   - http://192.168.1.226:80 
+
+   <video width="720" height="640" controls>
+  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/mrrobot.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 -  Access /admin, /wp-admin, and /login Directories
 
-   - http://192.168.1.226/admin/ &  http://192.168.1.226/wp-admin/
-
-   ![alt text](images/admin.jpg)
+    - http://192.168.1.226/admin/ &  http://192.168.1.226/wp-admin/
 
 
-  
+![alt text](images/admin.jpg)
+
    - http://192.168.1.226/wp-login.php
 
-      ![alt text](images/login2.jpg)
 
+![alt text](images/login2.jpg)
+
+
+## Wappalyzer
+
+### Key Technologies 
+
+- URL: http://192.168.1.226
+- CMS: WordPress
+- Analytics: WordPress
+- Font Scripts: Google Font API
+- Programming Languages: PHP
+- Databases: MySQL
+
+### Analysis 
+
+#### Content Management System (CMS)
+
+WordPress: The site is running on WordPress, which is a popular CMS known for its flexibility and wide range of plugins and themes. However, it also means that the site could be vulnerable to various common WordPress exploits if not properly secured.
+
+#### Programming Languages
+
+PHP: The server-side scripting language used by WordPress. PHP vulnerabilities are common in older versions, so ensuring the latest updates and security patches are applied is crucial.
+
+#### Database
+
+MySQL: The database management system used by WordPress. Securing the database against SQL injection and ensuring proper database configurations and permissions are essential.
+
+#### Font Scripts
+
+Google Font API: This is used to load custom fonts from Google Fonts. While generally not a security risk, it's part of the site's overall technology stack.
 
 
 

@@ -1,30 +1,34 @@
 # **Introduction**
 !!! note ""
 
-## Group Name: Pentesting Taskforce
-
-# Project title: Virtual Lab
-
-## Project description: 
-
-In preparation for the Exploitation Scenarios phase, each team member will be responsible for setting up their own VM or Vocareum machines, installing the necessary software, and configuring initial settings. 
-
-During this phase, specific network attacks will be the focus:
-
-- Ivan will undertake a comprehensive web penetration test using the Mr. Robot VM, and will document the process and results. 
 
 
-# My Local Video
+## **Project title: Virtual Lab**
 
-<video width="640" height="480" controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/mrrobot.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+### Overview
 
+This website represents a crucial component of a broader collaborative effort. As part of the final capstone project for the cyber boot camp, each team member is engaged in the Exploitation Scenarios phase. Responsibilities include:
 
-- Ozzy will perform MITM or VNC server attacks, including ARP Spoofing, DNS Spoofing, and SSL Stripping. 
-- Jordan will execute DoS and simulate DDoS attacks, documenting methods and impacts on service availability. 
-- Largo and Alpha will create phishing emails and utilize social engineering to deliver malware, and will document the tactics and results.
+- Setting up individual VM or Vocareum machines.
+- Installing the necessary software.
+- Configuring initial settings to conduct specific network attacks.
+
+#### Team Responsibilities
+
+**Ivan (Me) - Web Penetration Testing**  
+I will conduct a comprehensive web penetration test using the Mr. Robot VM. Throughout this process, I will meticulously document each step, the findings, and the overall results. This website showcases the detailed methodology and outcomes of my penetration testing journey.
+
+**Ozzy - MITM and VNC Server Attacks**  
+Ozzy will focus on Man-In-The-Middle (MITM) and VNC server attacks. This includes techniques such as ARP Spoofing, DNS Spoofing, and SSL Stripping. Ozzy will document these attacks, providing insights into the execution and impact of these tactics.
+
+**Jordan - DoS and DDoS Simulations**  
+Jordan will carry out Denial of Service (DoS) and simulate Distributed Denial of Service (DDoS) attacks. His documentation will cover the methods used and the impacts on service availability.
+
+**Largo and Alpha - Phishing and Social Engineering**  
+Largo and Alpha will create phishing emails and utilize social engineering techniques to deliver malware. They will document the tactics used and the results of their phishing campaigns.
+
+By working on these individual components, we aim to develop a comprehensive understanding of various network attacks and their implications. This collaborative effort will culminate in a well-rounded capstone project, demonstrating our collective skills and knowledge gained throughout the bootcamp.
+
 
 
 ## TimeLine

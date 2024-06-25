@@ -53,7 +53,7 @@ MAC Address: 08:00:27:52:3B:4C (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 5.13 seconds
 
 ```
-### Notable Findings
+### Findings
 
 
 The `http-wordpress-enum` script provided information about the WordPress plugins and themes installed on the target site. The results indicate the presence of the following:
@@ -130,7 +130,7 @@ Themes:
 ```
 
 
-### Notable Findings
+### Findings
 
 Nikto provided additional insights and potential security issues:
 

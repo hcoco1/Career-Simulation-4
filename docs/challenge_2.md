@@ -153,7 +153,7 @@ The updated Nmap scan results indicate that ports 80 and 443 are open and runnin
 !!! note ""
 
 <div class="button-container" markdown="1">
-<a href="/Career-Simulation-3/challenge_1/" class="md-button md-button--primary">Previous: Challenge 1</a>
+<a href="/Career-Simulation-3/challenge_1/" class="md-button md-button--primary">Previous: Step 1</a>
 <a href="/Career-Simulation-3/" class="md-button md-button--secondary">Home 🏠</a>
-<a href="/Career-Simulation-3/challenge_3/" class="md-button md-button--primary">Next: Challenge 3</a>
+<a href="/Career-Simulation-3/challenge_3/" class="md-button md-button--primary">Next: Step 3</a>
 </div>
