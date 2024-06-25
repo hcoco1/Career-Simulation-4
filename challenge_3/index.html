@@ -332,9 +332,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#notable-findings" class="md-nav__link">
+  <a href="#findings" class="md-nav__link">
     <span class="md-ellipsis">
-      Notable Findings
+      Findings
     </span>
   </a>
   
@@ -346,6 +346,81 @@
       Testing directories
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wappalyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wappalyzer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wappalyzer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Technologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-management-system-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Management System (CMS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Languages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Scripts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -389,11 +464,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../report/" class="md-nav__link">
+      <a href="../challenge_5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Report
+    Step 5: Brute-force
   </span>
   
 
@@ -409,11 +484,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../videos/" class="md-nav__link">
+      <a href="../challenge_6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Videos
+    Step 6: Reverse Shell
   </span>
   
 
@@ -578,7 +653,7 @@
 <blockquote>
 <p>The gobuster scan revealed several interesting directories and files on the target web server. </p>
 </blockquote>
-<h3 id="notable-findings">Notable Findings</h3>
+<h3 id="findings">Findings</h3>
 <ul>
 <li>/admin (Status: 301) -&gt; Redirects to /admin/</li>
 <li>/dashboard (Status: 302) -&gt; Redirects to /wp-admin/</li>
@@ -723,6 +798,25 @@
 <li>http://192.168.1.226/wp-login.php</li>
 </ul>
 <p><img alt="alt text" src="../images/login2.jpg"></p>
+<h2 id="wappalyzer">Wappalyzer</h2>
+<h3 id="key-technologies">Key Technologies</h3>
+<ul>
+<li>URL: http://192.168.1.226</li>
+<li>CMS: WordPress</li>
+<li>Analytics: WordPress</li>
+<li>Font Scripts: Google Font API</li>
+<li>Programming Languages: PHP</li>
+<li>Databases: MySQL</li>
+</ul>
+<h3 id="analysis">Analysis</h3>
+<h4 id="content-management-system-cms">Content Management System (CMS)</h4>
+<p>WordPress: The site is running on WordPress, which is a popular CMS known for its flexibility and wide range of plugins and themes. However, it also means that the site could be vulnerable to various common WordPress exploits if not properly secured.</p>
+<h4 id="programming-languages">Programming Languages</h4>
+<p>PHP: The server-side scripting language used by WordPress. PHP vulnerabilities are common in older versions, so ensuring the latest updates and security patches are applied is crucial.</p>
+<h4 id="database">Database</h4>
+<p>MySQL: The database management system used by WordPress. Securing the database against SQL injection and ensuring proper database configurations and permissions are essential.</p>
+<h4 id="font-scripts">Font Scripts</h4>
+<p>Google Font API: This is used to load custom fonts from Google Fonts. While generally not a security risk, it's part of the site's overall technology stack.</p>
 <div id="disqus_thread"></div>
 <script>
     /**
