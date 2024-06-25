@@ -4,9 +4,24 @@
 ## Group Name: Pentesting Taskforce
 
 # Project title: Virtual Lab
+
 ## Project description: 
 
-In preparation for the Exploitation Scenarios phase, each team member will be responsible for setting up their own VM or Vocareum machines, installing the necessary software, and configuring initial settings. During this phase, specific network attacks will be the focus. Ivan will undertake a comprehensive web penetration test using the Mr. Robot VM, and will document the process and results. Ozzy will perform MITM or VNC server attacks, including ARP Spoofing, DNS Spoofing, and SSL Stripping. Jordan will execute DoS and simulate DDoS attacks, documenting methods and impacts on service availability. Largo and Alpha will create phishing emails and utilize social engineering to deliver malware, and will document the tactics and results.
+In preparation for the Exploitation Scenarios phase, each team member will be responsible for setting up their own VM or Vocareum machines, installing the necessary software, and configuring initial settings. 
+
+During this phase, specific network attacks will be the focus:
+
+- Ivan will undertake a comprehensive web penetration test using the Mr. Robot VM, and will document the process and results. 
+
+
+<video width="640" height="480" controls>
+  <source src="/videos/mrrobot.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+- Ozzy will perform MITM or VNC server attacks, including ARP Spoofing, DNS Spoofing, and SSL Stripping. 
+- Jordan will execute DoS and simulate DDoS attacks, documenting methods and impacts on service availability. 
+- Largo and Alpha will create phishing emails and utilize social engineering to deliver malware, and will document the tactics and results.
 
 
 ## TimeLine
