@@ -152,16 +152,45 @@ Report
 Videos
 
 
-Hi, I'm Ivan, and today I'll show you how to exploit the Mr. Robot Vulnhub VM using Kali Linux.
 
-First, I set up the Kali Linux attacker VM and the Mr. Robot target VM, which hosts a WordPress site with three hidden keys. I used Nmap to scan the target IP for open ports and services.
+```python
+<speak>
+    Hi, I'm Ivan, and today I'll show you how to exploit the Mr. Robot Vulnhub VM using Kali Linux.<break time="500ms"/>
 
-Next, I used Gobuster to find hidden directories and Wappalyzer to identify web technologies in use.
+    First, I set up the Kali Linux attacker VM and the Mr. Robot target VM, which hosts a WordPress site with three hidden keys.<break time="500ms"/> I used Nmap to scan the target IP for open ports and services.<break time="500ms"/>
 
-Then, I looked for vulnerabilities using Nmap scripts and Nikto. After identifying potential weak points, I used Hydra to intelligently brute-force the WordPress admin login.
+    Next, I used Gobuster to find hidden directories and Wappalyzer to identify web technologies in use.<break time="500ms"/>
 
-Once I obtained the login credentials, I exploited the WordPress admin interface using Metasploit. By configuring the wp_admin_shell_upload module and running the exploit, I gained a Meterpreter session, which allowed me to navigate the file system.
+    Then, I looked for vulnerabilities using Nmap scripts and Nikto.<break time="500ms"/> After identifying potential weak points, I used Hydra to intelligently brute-force the WordPress admin login.<break time="500ms"/>
 
-Finally, I located and read the three hidden keys on the target system.
+    Once I obtained the login credentials, I exploited the WordPress admin interface using Metasploit.<break time="500ms"/> By configuring the admin shell upload module and running the exploit, I gained a Meterpreter session, which allowed me to navigate the file system.<break time="500ms"/>
 
-And that's how you can exploit the Mr. Robot VM using Kali Linux to find all the hidden keys. Thanks for watching!
+    Finally, I located and read the three hidden keys on the target system.<break time="500ms"/>
+
+    And that's how you can exploit the Mr. Robot VM using Kali Linux to find all the hidden keys.<break time="500ms"/> Thanks for watching!
+</speak>
+```
+
+- **Introduction:**
+"Welcome to our comprehensive guide on penetration testing. Learn how to ethically hack and secure your systems in just six easy steps."
+
+- **Step 1: Set Up Environment:**
+"First, set up a controlled and isolated environment. This ensures your testing doesn't impact live systems and provides a safe space for your work."
+
+- **Step 2: Network Scanning:**
+"Next, perform network scanning using Nmap. Nmap helps identify live hosts, open ports, and available services, providing a map of your target network."
+
+- **Step 3: Enumeration:**
+"Now, move on to enumeration. Use Gobuster to brute-force directories and Wappalyzer to identify technologies used by the target website. This reveals valuable information about the target."
+
+- **Step 4: Identifying Vulnerabilities:**
+"Identify vulnerabilities with Nmap and Nikto. Nmap scripts can detect specific vulnerabilities, while Nikto scans for outdated software and potential security issues in web servers."
+
+- **Step 5: Brute-force Attacks:**
+"For brute-force attacks, utilize Python scripts and Hydra. These tools attempt to guess login credentials, exposing weak passwords and access points."
+
+- **Step 6: Reverse Shell:**
+"Finally, achieve a reverse shell using a PHP reverse shell script or Metasploit. This step provides control over the target system, allowing you to demonstrate the impact of vulnerabilities."
+
+- **Conclusion:**
+"Remember, penetration testing is a powerful tool for improving security. Always practice ethical hacking and responsible disclosure. Stay secure!"

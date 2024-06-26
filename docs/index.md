@@ -8,14 +8,16 @@
 
 - [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
 
-
+   <video width="720" height="640" controls>
+  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/Penetration+Testi+2024-06-26.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ---
 
-![Image title](https://images.unsplash.com/flagged/photo-1560854350-13c0b47a3180?q=80&w=1142&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D){ align=center }
 
-Welcome to the **Career Simulation 4**. In this career simulation, you will use your newfound knowledge of vulnerability assessment and risk management to work through a problem. Using techniques learned in this bootcamp, you will examine and explain which tools and techniques to use for the best possible outcomes. Additionally, you will write a penetration testing report for your client that documents your findings.
+
 
 ## Table of Contents
 
