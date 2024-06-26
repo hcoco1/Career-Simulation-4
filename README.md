@@ -16,11 +16,15 @@
 
 # Career Simulation 4
 
-## Hacking Mr. Robot VM
+## Hacking Mr. Robot Virtual Machine
 
 ### by: [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
 
 ### Overview
+
+"Penetration testing is like a security checkup for computer systems. Testers simulate hacker activities to identify and fix vulnerabilities before real hackers can exploit them. This project will conduct a thorough web penetration test using the Mr. Robot Virtual Machine, which simulates realistic web vulnerabilities in a safe environment. This allows for the exploration and documentation of potential security flaws without affecting real systems.
+
+Every step, finding, and overall result will be carefully documented throughout the process. This website will present a detailed account of the methodology and outcomes of the penetration testing journey, offering insight into how security assessments are carried out and highlighting the importance of regular security maintenance in preventing cyber attacks."
 
 ## Step 1: Set Up Environment
 - **Objective:** Prepare your Kali Linux attacker VM and the Mr. Robot Vulnhub target VM.

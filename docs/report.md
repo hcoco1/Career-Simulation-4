@@ -1,4 +1,4 @@
-# **Step 7: Documenting**
+# **Documenting**
 !!! note ""
 ## **Written Report:**
 
