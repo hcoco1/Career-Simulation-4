@@ -3,10 +3,10 @@
 
 !!! note ""
 
-## Web Penetration Testing: Hacking Mr. Robot VM
+## Hacking Mr. Robot VM
 
 
- ### by: [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
+### by: [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
 
    <video width="720" height="640" controls>
   <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/Penetration+Testi+2024-06-26.mp4" type="video/mp4">
