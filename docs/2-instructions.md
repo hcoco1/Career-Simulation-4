@@ -18,6 +18,11 @@ This website represents a crucial component of a broader collaborative effort. A
 **Ivan (Me) - Web Penetration Testing**  
 I will conduct a comprehensive web penetration test using the Mr. Robot VM. Throughout this process, I will meticulously document each step, the findings, and the overall results. This website showcases the detailed methodology and outcomes of my penetration testing journey.
 
+  <audio controls>
+  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/Exploiting+Mr.+Robot+VM.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 **Ozzy - MITM and VNC Server Attacks**  
 Ozzy will focus on Man-In-The-Middle (MITM) and VNC server attacks. This includes techniques such as ARP Spoofing, DNS Spoofing, and SSL Stripping. Ozzy will document these attacks, providing insights into the execution and impact of these tactics.
 
