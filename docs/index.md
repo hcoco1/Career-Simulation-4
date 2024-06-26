@@ -5,8 +5,6 @@
 
 ### [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
 
-### WEb Penetration Testing Assesment.
-
 "Penetration testing is like a security checkup for computer systems. Testers simulate hacker activities to identify and fix vulnerabilities before real hackers can exploit them. This project will conduct a thorough web penetration test using the Mr. Robot Virtual Machine, which simulates realistic web vulnerabilities in a safe environment—allowing for exploring and documenting potential security flaws without affecting real systems.
 
 Every step, finding, and the overall result will be carefully documented throughout the process. This website will present a detailed account of the methodology and outcomes of the penetration testing journey, offering insight into how security assessments are carried out and highlighting the importance of regular security maintenance in preventing cyber attacks."
@@ -19,7 +17,7 @@ Every step, finding, and the overall result will be carefully documented through
 
 ---
 
-## Table of Contents
+## Contents:point_down:
 
 - [Introduction](2-instructions.md)
 - [Step 1: Set Up Environment](challenge_1.md)
@@ -29,6 +27,7 @@ Every step, finding, and the overall result will be carefully documented through
 - [Step 5: Brute-force](challenge_5.md)
 - [Step 6: Reverse Shell](challenge_6.md)
 - [Documenting](report.md)
+- [Videos](videos.md)
 
 
 <div id="disqus_thread"></div>
