@@ -675,13 +675,56 @@ Step 6: Reverse Shell
     - Metasploit
 Report
 Videos</p>
-<p>Hi, I'm Ivan, and today I'll show you how to exploit the Mr. Robot Vulnhub VM using Kali Linux.</p>
-<p>First, I set up the Kali Linux attacker VM and the Mr. Robot target VM, which hosts a WordPress site with three hidden keys. I used Nmap to scan the target IP for open ports and services.</p>
-<p>Next, I used Gobuster to find hidden directories and Wappalyzer to identify web technologies in use.</p>
-<p>Then, I looked for vulnerabilities using Nmap scripts and Nikto. After identifying potential weak points, I used Hydra to intelligently brute-force the WordPress admin login.</p>
-<p>Once I obtained the login credentials, I exploited the WordPress admin interface using Metasploit. By configuring the wp_admin_shell_upload module and running the exploit, I gained a Meterpreter session, which allowed me to navigate the file system.</p>
-<p>Finally, I located and read the three hidden keys on the target system.</p>
-<p>And that's how you can exploit the Mr. Robot VM using Kali Linux to find all the hidden keys. Thanks for watching!</p></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="o">&lt;</span><span class="n">speak</span><span class="o">&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="n">Hi</span><span class="p">,</span> <span class="n">I</span><span class="s1">'m Ivan, and today I'</span><span class="n">ll</span> <span class="n">show</span> <span class="n">you</span> <span class="n">how</span> <span class="n">to</span> <span class="n">exploit</span> <span class="n">the</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Robot</span> <span class="n">Vulnhub</span> <span class="n">VM</span> <span class="n">using</span> <span class="n">Kali</span> <span class="n">Linux</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="n">First</span><span class="p">,</span> <span class="n">I</span> <span class="nb">set</span> <span class="n">up</span> <span class="n">the</span> <span class="n">Kali</span> <span class="n">Linux</span> <span class="n">attacker</span> <span class="n">VM</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Robot</span> <span class="n">target</span> <span class="n">VM</span><span class="p">,</span> <span class="n">which</span> <span class="n">hosts</span> <span class="n">a</span> <span class="n">WordPress</span> <span class="n">site</span> <span class="k">with</span> <span class="n">three</span> <span class="n">hidden</span> <span class="n">keys</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span> <span class="n">I</span> <span class="n">used</span> <span class="n">Nmap</span> <span class="n">to</span> <span class="n">scan</span> <span class="n">the</span> <span class="n">target</span> <span class="n">IP</span> <span class="k">for</span> <span class="nb">open</span> <span class="n">ports</span> <span class="ow">and</span> <span class="n">services</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="n">Next</span><span class="p">,</span> <span class="n">I</span> <span class="n">used</span> <span class="n">Gobuster</span> <span class="n">to</span> <span class="n">find</span> <span class="n">hidden</span> <span class="n">directories</span> <span class="ow">and</span> <span class="n">Wappalyzer</span> <span class="n">to</span> <span class="n">identify</span> <span class="n">web</span> <span class="n">technologies</span> <span class="ow">in</span> <span class="n">use</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    <span class="n">Then</span><span class="p">,</span> <span class="n">I</span> <span class="n">looked</span> <span class="k">for</span> <span class="n">vulnerabilities</span> <span class="n">using</span> <span class="n">Nmap</span> <span class="n">scripts</span> <span class="ow">and</span> <span class="n">Nikto</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span> <span class="n">After</span> <span class="n">identifying</span> <span class="n">potential</span> <span class="n">weak</span> <span class="n">points</span><span class="p">,</span> <span class="n">I</span> <span class="n">used</span> <span class="n">Hydra</span> <span class="n">to</span> <span class="n">intelligently</span> <span class="n">brute</span><span class="o">-</span><span class="n">force</span> <span class="n">the</span> <span class="n">WordPress</span> <span class="n">admin</span> <span class="n">login</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    <span class="n">Once</span> <span class="n">I</span> <span class="n">obtained</span> <span class="n">the</span> <span class="n">login</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">I</span> <span class="n">exploited</span> <span class="n">the</span> <span class="n">WordPress</span> <span class="n">admin</span> <span class="n">interface</span> <span class="n">using</span> <span class="n">Metasploit</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span> <span class="n">By</span> <span class="n">configuring</span> <span class="n">the</span> <span class="n">admin</span> <span class="n">shell</span> <span class="n">upload</span> <span class="n">module</span> <span class="ow">and</span> <span class="n">running</span> <span class="n">the</span> <span class="n">exploit</span><span class="p">,</span> <span class="n">I</span> <span class="n">gained</span> <span class="n">a</span> <span class="n">Meterpreter</span> <span class="n">session</span><span class="p">,</span> <span class="n">which</span> <span class="n">allowed</span> <span class="n">me</span> <span class="n">to</span> <span class="n">navigate</span> <span class="n">the</span> <span class="n">file</span> <span class="n">system</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    <span class="n">Finally</span><span class="p">,</span> <span class="n">I</span> <span class="n">located</span> <span class="ow">and</span> <span class="n">read</span> <span class="n">the</span> <span class="n">three</span> <span class="n">hidden</span> <span class="n">keys</span> <span class="n">on</span> <span class="n">the</span> <span class="n">target</span> <span class="n">system</span><span class="o">.&lt;</span><span class="k">break</span> <span class="n">time</span><span class="o">=</span><span class="s2">"500ms"</span><span class="o">/&gt;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>    <span class="n">And</span> <span class="n">that</span><span class="s1">'s how you can exploit the Mr. Robot VM using Kali Linux to find all the hidden keys.&lt;break time="500ms"/&gt; Thanks for watching!</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="o">&lt;/</span><span class="n">speak</span><span class="o">&gt;</span>
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Introduction:</strong>
+"Welcome to our comprehensive guide on penetration testing. Learn how to ethically hack and secure your systems in just six easy steps."</p>
+</li>
+<li>
+<p><strong>Step 1: Set Up Environment:</strong>
+"First, set up a controlled and isolated environment. This ensures your testing doesn't impact live systems and provides a safe space for your work."</p>
+</li>
+<li>
+<p><strong>Step 2: Network Scanning:</strong>
+"Next, perform network scanning using Nmap. Nmap helps identify live hosts, open ports, and available services, providing a map of your target network."</p>
+</li>
+<li>
+<p><strong>Step 3: Enumeration:</strong>
+"Now, move on to enumeration. Use Gobuster to brute-force directories and Wappalyzer to identify technologies used by the target website. This reveals valuable information about the target."</p>
+</li>
+<li>
+<p><strong>Step 4: Identifying Vulnerabilities:</strong>
+"Identify vulnerabilities with Nmap and Nikto. Nmap scripts can detect specific vulnerabilities, while Nikto scans for outdated software and potential security issues in web servers."</p>
+</li>
+<li>
+<p><strong>Step 5: Brute-force Attacks:</strong>
+"For brute-force attacks, utilize Python scripts and Hydra. These tools attempt to guess login credentials, exposing weak passwords and access points."</p>
+</li>
+<li>
+<p><strong>Step 6: Reverse Shell:</strong>
+"Finally, achieve a reverse shell using a PHP reverse shell script or Metasploit. This step provides control over the target system, allowing you to demonstrate the impact of vulnerabilities."</p>
+</li>
+<li>
+<p><strong>Conclusion:</strong>
+"Remember, penetration testing is a powerful tool for improving security. Always practice ethical hacking and responsible disclosure. Stay secure!"</p>
+</li>
+</ul></div>
 
 
 
