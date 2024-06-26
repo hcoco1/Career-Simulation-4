@@ -1,8 +1,6 @@
 # **Introduction**
 !!! note ""
 
-
-
 ## **Project title: Virtual Lab**
 
 ### Overview
@@ -15,7 +13,7 @@ This website represents a crucial component of a broader collaborative effort. A
 
 #### Team Responsibilities
 
-**Ivan (Me) - Web Penetration Testing**  
+**Ivan (🧑🏻‍💻 ☠️) - Web Penetration Testing**  
 I will conduct a comprehensive web penetration test using the Mr. Robot VM. Throughout this process, I will meticulously document each step, the findings, and the overall results. This website showcases the detailed methodology and outcomes of my penetration testing journey.
 
   <audio controls>
@@ -52,7 +50,6 @@ Environment Setup (06/21 - 06/22)
 Configuration (06/23 - 06/24)
 - Configure network settings and services on VMs.
 - Responsibility: All team members
-
 
 ### Week 2: Exploitation Scenarios
 
