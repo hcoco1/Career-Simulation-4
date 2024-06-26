@@ -100,7 +100,7 @@ Final Review and Presentation (07/03)
 !!! note ""
 
 <div class="button-container" markdown="1">
-<a href="/Career-Simulation-3/" class="md-button md-button--secondary">Home 🏠</a>
-<a href="/Career-Simulation-3/challenge_1/" class="md-button md-button--primary">Next: Challenge 1</a>
+<a href="/Career-Simulation-4/" class="md-button md-button--secondary">Home 🏠</a>
+<a href="/Career-Simulation-4/challenge_1/" class="md-button md-button--primary">Next: Step 1</a>
 </div>
 

