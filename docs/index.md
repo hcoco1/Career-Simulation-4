@@ -18,7 +18,7 @@
 
 ## Table of Contents
 
-- [Home 🏠](index.md)
+
 - [Introduction](2-instructions.md)
 - [Step 1: Set Up Environment](challenge_1.md)
 - [Step 2: Network Scanning](challenge_2.md)
@@ -26,6 +26,7 @@
 - [Step 4: Vulnerabilities](challenge_4.md)
 - [Step 5: Brute-force](challenge_5.md)
 - [Step 6: Reverse Shell](challenge_6.md)
+- [Step 7: Report](report.md)
 
 
 
