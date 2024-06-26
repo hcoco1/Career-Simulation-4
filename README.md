@@ -15,16 +15,10 @@
 
 
 
-# Capstone
-
-!!! note ""
-
-## Web Penetration Testing
+## Web Penetration Testing Mr. Robot VM
 
 
 - [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
-
-
 
 
 ---
