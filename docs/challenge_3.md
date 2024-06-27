@@ -168,7 +168,7 @@ window
 ### Testing directories
 
 
-   - http://192.168.1.226:80 
+   - http://192.168.1.226:80 📺 Use full screen for a better experience! 📺
 
    <video width="720" height="640" controls>
   <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/mrrobot.mp4" type="video/mp4">
