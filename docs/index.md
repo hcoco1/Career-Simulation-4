@@ -30,6 +30,7 @@ Every step, finding, and the overall result will be carefully documented through
 - [Step 5: Brute-force](challenge_5.md)
 - [Step 6: Reverse Shell](challenge_6.md)
 - [Documenting](report.md)
+- [Recommendations](recommendations.md)
 - [Technologies](technologies.md)
 - [Videos](videos.md)
 
