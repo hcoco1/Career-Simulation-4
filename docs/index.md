@@ -29,8 +29,9 @@ Every step, finding, and the overall result will be carefully documented through
 - [Step 4: Vulnerabilities](challenge_4.md)
 - [Step 5: Brute-force](challenge_5.md)
 - [Step 6: Reverse Shell](challenge_6.md)
+- [Recommendations](o-recommendations.md)
 - [Documenting](report.md)
-- [Recommendations](recommendations.md)
+- [Presentation](presenattion.md)
 - [Technologies](technologies.md)
 - [Videos](videos.md)
 

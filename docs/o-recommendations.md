@@ -1,4 +1,4 @@
-## Recommendations
+# **Recommendations**
 
 The findings from the Mr. Robot Vulnhub Virtual Machine assessment highlight several critical vulnerabilities that pose significant security risks. To mitigate these vulnerabilities and enhance the overall security posture, the following recommendations are proposed:
 
