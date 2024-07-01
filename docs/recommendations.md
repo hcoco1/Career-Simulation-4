@@ -15,3 +15,11 @@ The findings from the Mr. Robot Vulnhub Virtual Machine assessment highlight sev
 - **Enhance Configuration Management:** Review and improve server configurations to minimize exposure to security risks. Ensure that all configurations align with industry best practices and security guidelines.
 
 By addressing these recommendations, organizations can significantly enhance their security posture, protect against potential exploits, and maintain a robust and secure environment for their systems and applications.
+
+
+<div class="button-container" markdown="1">
+
+<a href="/Career-Simulation-4/" class="md-button md-button--secondary">Home 🏠</a>
+
+
+</div>
