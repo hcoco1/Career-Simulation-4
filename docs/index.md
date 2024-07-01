@@ -3,7 +3,7 @@
 
 ## Hacking Mr. Robot Virtual Machine
 
-### [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
+[**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
 
 "Penetration testing is like a security checkup for computer systems. Testers simulate hacker activities to identify and fix vulnerabilities before real hackers can exploit them. This project will conduct a thorough web penetration test using the Mr. Robot Virtual Machine, which simulates realistic web vulnerabilities in a safe environment—allowing for exploring and documenting potential security flaws without affecting real systems.
 
@@ -19,7 +19,7 @@ Every step, finding, and the overall result will be carefully documented through
 
 ## Contents:point_down:
 
-- [Introduction](2-instructions.md)
+- [Project Kickoff](0-instructions.md)
 - [Step 1: Set Up Environment](challenge_1.md)
 - [Step 2: Network Scanning](challenge_2.md)
 - [Step 3: Enumeration](challenge_3.md)
@@ -30,26 +30,7 @@ Every step, finding, and the overall result will be carefully documented through
 - [Videos](videos.md)
 
 
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://hcoco1-1.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+!!! note ""
 
 
 

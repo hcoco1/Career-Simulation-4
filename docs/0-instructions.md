@@ -1,11 +1,12 @@
-# **Introduction**
+# **Project Kickoff**
 !!! note ""
 
 ## **Project title: Virtual Lab**
 
 ### Overview
 
-This website represents a crucial component of a broader collaborative effort. As part of the final capstone project for the cyber boot camp, each team member is engaged in the Exploitation Scenarios phase. Responsibilities include:
+This website is an integral part of a collaborative effort, serving as a key component of the final capstone project for the cyber bootcamp. Titled "Virtual Lab," this project involves each team member focusing on different exploitation scenarios.
+Responsibilities include:
 
 - Setting up individual VM or Vocareum machines.
 - Installing the necessary software.
@@ -13,7 +14,7 @@ This website represents a crucial component of a broader collaborative effort. A
 
 #### Team Responsibilities
 
-**Ivan (🧑🏻‍💻 ☠️) - Web Penetration Testing**  
+**Attack 1: Ivan (🧑🏻‍💻 ☠️) - Web Penetration Testing**  
 I will conduct a comprehensive web penetration test using the Mr. Robot VM. Throughout this process, I will meticulously document each step, the findings, and the overall results. This website showcases the detailed methodology and outcomes of my penetration testing journey.
 
   <audio controls>
@@ -21,14 +22,24 @@ I will conduct a comprehensive web penetration test using the Mr. Robot VM. Thro
   Your browser does not support the audio element.
 </audio>
 
-**Ozzy - MITM and VNC Server Attacks**  
+This website showcases the detailed methodology and outcomes of Ivan's penetration testing journey.
+
+Link: https://hcoco1.github.io/Career-Simulation-4/1-summary/
+
+**Attack 2: Ozzy - MITM and VNC Server Attacks**  
 Ozzy will focus on Man-In-The-Middle (MITM) and VNC server attacks. This includes techniques such as ARP Spoofing, DNS Spoofing, and SSL Stripping. Ozzy will document these attacks, providing insights into the execution and impact of these tactics.
 
-**Jordan - DoS and DDoS Simulations**  
+Link:
+
+**Attack 3: Jordan - DoS and DDoS Simulations**  
 Jordan will carry out Denial of Service (DoS) and simulate Distributed Denial of Service (DDoS) attacks. His documentation will cover the methods used and the impacts on service availability.
 
-**Largo and Alpha - Phishing and Social Engineering**  
+Link:
+
+**Attack 4: Largo and Alpha - Phishing and Social Engineering**  
 Largo and Alpha will create phishing emails and utilize social engineering techniques to deliver malware. They will document the tactics used and the results of their phishing campaigns.
+
+Link:
 
 By working on these individual components, we aim to develop a comprehensive understanding of various network attacks and their implications. This collaborative effort will culminate in a well-rounded capstone project, demonstrating our collective skills and knowledge gained throughout the bootcamp.
 
@@ -36,7 +47,7 @@ By working on these individual components, we aim to develop a comprehensive und
 
 ## TimeLine
 
-### Week 1: Planning and Setup
+### Week 1: Setup
 Planning and Design (06/19 - 06/20)
 - Define objectives and requirements.
 - Design network topology.
@@ -51,7 +62,7 @@ Configuration (06/23 - 06/24)
 - Configure network settings and services on VMs.
 - Responsibility: All team members
 
-### Week 2: Exploitation Scenarios
+### Week 2: Scenarios
 
 Phase: Exploitation Scenarios (06/25 - 07/02)
 Each member will focus on specific network attacks. All attacks will be performed concurrently, with members collaborating and sharing findings and strategies.
@@ -84,7 +95,7 @@ Phishing and Malware Injection
   - Use social engineering techniques to deliver malware to a Windows user.
   - Document the process, the social engineering tactics used, and the results.
 
-### Week 3: Documentation and Reporting
+### Week 3: Reporting
 
 Documentation and Reporting (07/03)
 - Document exploitation steps and propose mitigation strategies.
