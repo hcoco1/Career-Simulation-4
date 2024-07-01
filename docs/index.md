@@ -1,7 +1,9 @@
 
-# Career Simulation 4 🏠
+# Home 🏠
 
-## Hacking Mr. Robot Virtual Machine
+## Career Simulation 4 
+
+###  Hacking Mr. Robot Virtual Machine
 
 [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
 
@@ -17,9 +19,10 @@ Every step, finding, and the overall result will be carefully documented through
 
 ---
 
-## Contents:point_down:
+### Contents:point_down:
 
 - [Project Kickoff](0-instructions.md)
+- [Summary](1-summary.md)
 - [Step 1: Set Up Environment](challenge_1.md)
 - [Step 2: Network Scanning](challenge_2.md)
 - [Step 3: Enumeration](challenge_3.md)
@@ -27,6 +30,7 @@ Every step, finding, and the overall result will be carefully documented through
 - [Step 5: Brute-force](challenge_5.md)
 - [Step 6: Reverse Shell](challenge_6.md)
 - [Documenting](report.md)
+- [Technologies](technologies.md)
 - [Videos](videos.md)
 
 
