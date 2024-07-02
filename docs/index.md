@@ -1,9 +1,8 @@
-
 # Home 🏠
 
 ## Career Simulation 4 
 
-###  Hacking Mr. Robot Virtual Machine
+
 
 [**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
 
@@ -31,7 +30,7 @@ Every step, finding, and the overall result will be carefully documented through
 - [Step 6: Reverse Shell](challenge_6.md)
 - [Recommendations](o-recommendations.md)
 - [Documenting](report.md)
-- [Presentation](presenattion.md)
+- [Presentation](presentation.md)
 - [Technologies](technologies.md)
 - [Videos](videos.md)
 
