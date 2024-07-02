@@ -58,7 +58,7 @@
 !!! note ""
 
 <div class="button-container" markdown="1">
-<a href="/Career-Simulation-4/2-instructions/" class="md-button md-button--primary">Previous: Introduction</a>
+<a href="/Career-Simulation-4/0-instructions/" class="md-button md-button--primary">Previous: Introduction</a>
 <a href="/Career-Simulation-4/" class="md-button md-button--secondary">Home 🏠</a>
 <a href="/Career-Simulation-4/challenge_2/" class="md-button md-button--primary">Next: Step 2</a>
 </div>

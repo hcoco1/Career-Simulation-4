@@ -1,4 +1,6 @@
-# **Recommendations**
+# **Final Thouths**
+
+## Final Thouths 
 
 The findings from the Mr. Robot Vulnhub Virtual Machine assessment highlight several critical vulnerabilities that pose significant security risks. To mitigate these vulnerabilities and enhance the overall security posture, the following recommendations are proposed:
 
@@ -18,8 +20,8 @@ By addressing these recommendations, organizations can significantly enhance the
 
 
 <div class="button-container" markdown="1">
-
+<a href="/Career-Simulation-4/recommendations/" class="md-button md-button--primary">Previous: Step 6</a>
 <a href="/Career-Simulation-4/" class="md-button md-button--secondary">Home 🏠</a>
-
+<a href="/Career-Simulation-4/presentation/" class="md-button md-button--primary">Next: Presentation</a>
 
 </div>

@@ -27,7 +27,7 @@
 
 
 <div class="button-container" markdown="1">
-<a href="/Career-Simulation-4/challenge_6/" class="md-button md-button--primary">Previous: Step 6</a>
+<a href="/Career-Simulation-4/presentation/" class="md-button md-button--primary">Previous: Presentation</a>
 <a href="/Career-Simulation-4/" class="md-button md-button--secondary">Home 🏠</a>
 <a href="/Career-Simulation-4/videos/" class="md-button md-button--primary">Next: Videos</a>
 

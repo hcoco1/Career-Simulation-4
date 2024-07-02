@@ -19,8 +19,8 @@
 
 
 <div class="button-container" markdown="1">
-
+<a href="/Career-Simulation-4/recommendations/" class="md-button md-button--primary">Previous: Recomendations</a>
 <a href="/Career-Simulation-4/" class="md-button md-button--secondary">Home 🏠</a>
-
+<a href="/Career-Simulation-4/report/" class="md-button md-button--primary">Next: Report</a>
 
 </div>
