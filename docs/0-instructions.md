@@ -27,7 +27,7 @@ This website showcases the detailed methodology and outcomes of Ivan's penetrati
 Link:  [Web Penetration Testing](https://hcoco1.github.io/Career-Simulation-4/1-summary/)
 
 **Attack 2: Ozzy - MITM and VNC Server Attacks**  
-Ozzy will focus on Man-In-The-Middle (MITM) and VNC server attacks. This includes techniques such as ARP Spoofing, DNS Spoofing, and SSL Stripping. Ozzy will document these attacks, providing insights into the execution and impact of these tactics.
+Ozzy will focus on Man-In-The-Middle (MITM). This includes techniques such as ARP Spoofing, DNS Spoofing, and SSL Stripping. Ozzy will document these attacks, providing insights into the execution and impact of these tactics.
 
 Link:
 
