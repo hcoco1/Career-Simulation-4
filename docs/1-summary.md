@@ -1,4 +1,4 @@
-# Summary ☠️
+# Executive Summary 
 
 This report presents a structured methodology for ethical hacking and securing systems, specifically focusing on a vulnerable Vulnhub Virtual Machine called Mr. Robot, which hosts a WordPress site.
 

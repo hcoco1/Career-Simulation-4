@@ -1,13 +1,13 @@
 # Technologies
 
-- **URL**: http://192.168.1.226
+- **URL**: http://192.168.1.226 (Target Machine)
 - **CMS**: WordPress
 - **Analytics**: WordPress
 - **Font Scripts**: Google Font API
 - **Programming Languages**: PHP
 - **Databases**: MySQL
 
-The `http-wordpress-enum` script provided information about the WordPress plugins and themes installed on the target site. The results indicate the presence of the following:
+>The `http-wordpress-enum` script provided information about the WordPress plugins and themes installed on the target site. The results indicate the presence of the following:
 
 ## Plugins:
 - Akismet

@@ -1,14 +1,15 @@
-# Home 🏠
-
-## Career Simulation 4 
+# Hacking Mr. Robot
 
 
+[**By: Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 
 
-[**Ivan Arias**](http://www.hcoco1.com) 🧑🏻‍💻 ☠️
+## Ethical Hacking - Overview
 
-"Penetration testing is like a security checkup for computer systems. Testers simulate hacker activities to identify and fix vulnerabilities before real hackers can exploit them. This project will conduct a thorough web penetration test using the Mr. Robot Virtual Machine, which simulates realistic web vulnerabilities in a safe environment—allowing for exploring and documenting potential security flaws without affecting real systems.
+Penetration testing is like a thorough security checkup for computer systems. Testers simulate hacker activities to find and fix vulnerabilities before attackers can take advantage of them. This practice is essential for maintaining the integrity and security of digital systems.
 
-Every step, finding, and the overall result will be carefully documented throughout the process. This website will present a detailed account of the methodology and outcomes of the penetration testing journey, offering insight into how security assessments are carried out and highlighting the importance of regular security maintenance in preventing cyber attacks."
+This project is of utmost importance as it aims to conduct a thorough web penetration test using the Mr. Robot Virtual Machine, which simulates realistic web vulnerabilities in a controlled environment. This setup allows for the exploration and documentation of potential security flaws without impacting real systems.
+
+Each step, finding, and the overall result will be meticulously documented. This website will provide a detailed account of the methodology and outcomes of the penetration testing journey, offering insights into the process of security assessments and underscoring the importance of regular security maintenance to prevent cyber attacks. Remember, penetration testing is not just a task, it's a crucial practice for maintaining the integrity and security of digital systems.
 
    <video width="720" height="640" controls>
   <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/Penetration+Testi+2024-06-26.mp4" type="video/mp4">
@@ -18,7 +19,7 @@ Every step, finding, and the overall result will be carefully documented through
 
 ---
 
-### Contents:point_down:
+## Contents:point_down:
 
 - [Project Kickoff](0-instructions.md)
 - [Summary](1-summary.md)
