@@ -26,6 +26,8 @@
 
 Every step, finding, and the overall result will be carefully documented throughout the process. This website will present a detailed account of the methodology and outcomes of the penetration testing journey, offering insight into how security assessments are carried out and highlighting the importance of regular security maintenance in preventing cyber attacks."
 
+### [**Live Report**](https://hcoco1.github.io/Career-Simulation-4/) 🧑🏻‍💻 ☠️
+
 ## Step 1: Set Up Environment
 - **Objective:** Prepare your Kali Linux attacker VM and the Mr. Robot Vulnhub target VM.
 - **Actions:**
