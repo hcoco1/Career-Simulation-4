@@ -21,8 +21,7 @@ Each step, finding, and the overall result will be meticulously documented. This
 
 ## Contents:point_down:
 
-- [Project Kickoff](0-instructions.md)
-- [Summary](1-summary.md)
+- [Executive Summary](1-summary.md)
 - [Step 1: Set Up Environment](challenge_1.md)
 - [Step 2: Network Scanning](challenge_2.md)
 - [Step 3: Enumeration](challenge_3.md)

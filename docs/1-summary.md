@@ -78,7 +78,6 @@ The report revealed several critical vulnerabilities:
 !!! note ""
 
 <div class="button-container" markdown="1">
-<a href="/Career-Simulation-4/0-instructions/" class="md-button md-button--primary">Previous: KickOff</a>
 <a href="/Career-Simulation-4/" class="md-button md-button--secondary">Home 🏠</a>
 <a href="/Career-Simulation-4/challenge_1/" class="md-button md-button--primary">Next: Step 1</a>
 </div>
