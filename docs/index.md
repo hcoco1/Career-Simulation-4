@@ -11,10 +11,12 @@ This project is of utmost importance as it aims to conduct a thorough web penetr
 
 Each step, finding, and the overall result will be meticulously documented. This website will provide a detailed account of the methodology and outcomes of the penetration testing journey, offering insights into the process of security assessments and underscoring the importance of regular security maintenance to prevent cyber attacks. Remember, penetration testing is not just a task, it's a crucial practice for maintaining the integrity and security of digital systems.
 
+<div align="center">
    <video width="720" height="640" controls>
   <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/Penetration+Testi+2024-06-26.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+</div>
 
 
 ---
