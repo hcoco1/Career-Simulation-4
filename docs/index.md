@@ -11,12 +11,7 @@ This project is of utmost importance as it aims to conduct a thorough web penetr
 Each step, finding, and the overall result will be meticulously documented. This website will provide a detailed account of the methodology and outcomes of the penetration testing journey, offering insights into the process of security assessments and underscoring the importance of regular security maintenance to prevent cyber attacks. Remember, penetration testing is not just a task, it's a crucial practice for maintaining the integrity and security of digital systems.
 
 <div align="center">
-  <iframe width="720" height="640" 
-    src="https://youtu.be/h_1kdILmgIE" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h_1kdILmgIE?si=8Vh4bCtlD72eR7-h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
