@@ -175,6 +175,8 @@ window
   Your browser does not support the video tag.
 </video>
 
+<iframe width="560" height="315" src="https://youtu.be/I05CgeGyNxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 -  Access /admin, /wp-admin, and /login Directories
 
     - http://192.168.1.226/admin/ &  http://192.168.1.226/wp-admin/
