@@ -1,4 +1,5 @@
 # **Step 3: Enumeration**
+
 !!! note ""
 
 ## Gobuster
@@ -76,10 +77,10 @@ Finished
 
 ```
 
-
->The gobuster scan revealed several interesting directories and files on the target web server. 
+>The gobuster scan revealed several interesting directories and files on the target web server.
 
 ### Findings
+
 - /admin (Status: 301) -> Redirects to /admin/
 - /dashboard (Status: 302) -> Redirects to /wp-admin/
 - /login (Status: 302) -> Redirects to /wp-login.php
@@ -90,7 +91,6 @@ Finished
 - /wp-login.php (Status: 200) -> WordPress login page
 
   >Based on the output  provided from  `gobuster` command, we can see that the Target VM contains a Wordpress Site.
-
 
 - Examine /robots.txt File:
 
@@ -133,7 +133,6 @@ window
 
 >Since the fsocity.dic file is too long, it’s practical to preprocess it before using it in brute-force attacks
 
-
 ```python linenums="1" hl_lines="8"
 ┌──(hcoco1㉿kali)-[~]
 └─$ sort fsocity.dic | uniq > fsocity_sorted_unique.dic
@@ -163,45 +162,37 @@ window
 
 
 ```
+
 > Flag 1 was found.
 
 ### Testing directories
 
+- <http://192.168.1.226:80> 📺 Use full screen for a better experience! 📺
 
-   - http://192.168.1.226:80 📺 Use full screen for a better experience! 📺
+<iframe width="720" height="640" src="https://www.youtube.com/embed/I05CgeGyNxE?si=pArAE42k5-5ucUIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-   <video width="720" height="640" controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/mrrobot.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+- Access /admin, /wp-admin, and /login Directories
 
-<iframe width="560" height="315" src="https://youtu.be/I05CgeGyNxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
--  Access /admin, /wp-admin, and /login Directories
-
-    - http://192.168.1.226/admin/ &  http://192.168.1.226/wp-admin/
-
+  - <http://192.168.1.226/admin/> &  <http://192.168.1.226/wp-admin/>
 
 ![alt text](images/admin.jpg)
 
-   - http://192.168.1.226/wp-login.php
-
+- <http://192.168.1.226/wp-login.php>
 
 ![alt text](images/login2.jpg)
 
-
 ## Wappalyzer
 
-### Key Technologies 
+### Key Technologies
 
-- URL: http://192.168.1.226
+- URL: <http://192.168.1.226>
 - CMS: WordPress
 - Analytics: WordPress
 - Font Scripts: Google Font API
 - Programming Languages: PHP
 - Databases: MySQL
 
-### Analysis 
+### Analysis
 
 #### Content Management System (CMS)
 
@@ -218,13 +209,6 @@ MySQL: The database management system used by WordPress. Securing the database a
 #### Font Scripts
 
 Google Font API: This is used to load custom fonts from Google Fonts. While generally not a security risk, it's part of the site's overall technology stack.
-
-
-
-
-
-
-
 
 <div id="disqus_thread"></div>
 <script>

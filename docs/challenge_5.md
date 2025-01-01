@@ -76,10 +76,7 @@ print("Valid usernames saved to valid_usernames.txt")
 
 #### Video usernames
 
-<video width="640" height="480" controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/python_usernames.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RWzt33r-1ao?si=wdK4rvxxzY5njBgy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - Inspecting the valid_usernames.txt
 
@@ -146,10 +143,7 @@ for username in valid_usernames:
 
 #### Video password
 
-<video width="640" height="480" controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/python_password.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7RNgscfL0PQ?si=bjMd26r6D-WCh3n4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 >Success with username: elliot and password: ER28-0652
